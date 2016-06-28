@@ -1,0 +1,21 @@
+package com.test;
+
+public class EmployeeDAOImpl implements EmployeeDao {
+    private SessionFactory sessionFactory;
+ 
+    public UserDAOImpl(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
+ 
+    @Override
+    @Transactional
+    public List<User> list() {
+        @SuppressWarnings("unchecked")
+        List<User> listUser = (List<User>) sessionFactory.getCurrentSession()
+                .createCriteria(User.class)
+                .setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
+ 
+        return listUser;
+    }
+ 
+}

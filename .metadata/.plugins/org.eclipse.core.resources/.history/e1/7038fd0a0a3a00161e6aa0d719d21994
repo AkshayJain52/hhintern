@@ -1,0 +1,32 @@
+package com.day2;
+
+public class SspringDao {
+	HibernateTemplate template;  
+	public void setTemplate(HibernateTemplate template) {  
+	    this.template = template;  
+	}  
+	//method to save Sspring  
+	public void saveSspring(Sspring e){  
+	    template.save(e);  
+	}  
+	//method to update Sspring  
+	public void updateSspring(Sspring e){  
+	    template.update(e);  
+	}  
+	//method to delete Sspring  
+	public void deleteSspring(Sspring e){  
+	    template.delete(e);  
+	}  
+	//method to return one Sspring of given id  
+	public Sspring getById(int id){  
+	    Sspring e=(Sspring)template.get(Sspring.class,id);  
+	    return e;  
+	}  
+	//method to return all Ssprings  
+	public List<Sspring> getSsprings(){  
+	    List<Sspring> list=new ArrayList<Sspring>();  
+	    list=template.loadAll(Sspring.class);  
+	    return list;  
+	}  
+	}  
+

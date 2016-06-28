@@ -1,0 +1,19 @@
+package com.test;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class HomeController {
+ 
+	    @Autowired
+	    private EmployeeDao userDao;
+	     
+	    @RequestMapping(value="/")
+	    public ModelAndView home() {
+	        List<User> listUsers = userDao.list();
+	        ModelAndView model = new ModelAndView("home");
+	        model.addObject("userList", listUsers);
+	        return model;
+	    }
+	     
+	}
+
