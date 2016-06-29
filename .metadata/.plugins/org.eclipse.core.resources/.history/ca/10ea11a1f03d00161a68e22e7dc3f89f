@@ -1,0 +1,11 @@
+package com.test;
+
+import org.springframework.web.portlet.ModelAndView;
+
+public class Helloworldcontroller {
+
+	public ModelAndView helloWorld() {  
+        String message = "HELLO SPRING MVC HOW R U";  
+        return new ModelAndView("hellopage", "message", message); 
+}
+}
