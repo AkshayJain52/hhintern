@@ -95,7 +95,11 @@
 	<classpathentry kind="lib" path="C:/Users/HHEXUSER/Downloads/spring and hibernate jar/org.springframework.web.servlet-3.0.0.M3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/HHEXUSER/Downloads/spring and hibernate jar/org.springframework.web.servlet-3.0.1.RELEASE-A.jar"/>
 	<classpathentry kind="lib" path="C:/Users/HHEXUSER/Downloads/spring and hibernate jar/org.springframework.web.struts-3.0.1.RELEASE-A.jar"/>
-	<classpathentry kind="lib" path="C:/Users/HHEXUSER/Downloads/spring and hibernate jar/org.springframework.web-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="C:/Users/HHEXUSER/Downloads/spring and hibernate jar/org.springframework.web-3.0.1.RELEASE-A.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/HHEXUSER/Downloads/spring and hibernate jar/persistence.jar"/>
 	<classpathentry kind="lib" path="C:/Users/HHEXUSER/Downloads/spring and hibernate jar/servlet.jar"/>
 	<classpathentry kind="lib" path="C:/Users/HHEXUSER/Downloads/spring and hibernate jar/spring-hibernate.jar"/>
