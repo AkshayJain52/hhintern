@@ -1,0 +1,4 @@
+1467263892575	Move 'jsp' to 'WEB-INF'
+1467263909937	Move 'Spring-servlet.xml' to 'WEB-INF'
+1467263922499	Move 'web.xml' to 'WEB-INF'
+1467263935719	Move 'index.jsp' to 'WebContent'
