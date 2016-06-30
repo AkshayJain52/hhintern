@@ -3,3 +3,10 @@
 1467263922499	Move 'web.xml' to 'WEB-INF'
 1467263935719	Move 'index.jsp' to 'WebContent'
 1467277359846	Rename resource 'Spring-servlet.xml'
+1467278204222	Rename resource 'spring-servlet.xml'
+1467278750964	Move 'dispatcher-servlet.xml' to 'WebContent'
+1467278773754	Move 'dispatcher-servlet.xml' to 'mvcproject'
+1467279101650	Move 'dispatcher-servlet.xml' to 'WEB-INF'
+1467279849220	Move file
+1467279863878	Move 'web.xml' to 'WebContent'
+1467280229295	Rename resource 'hellopage.jsp'

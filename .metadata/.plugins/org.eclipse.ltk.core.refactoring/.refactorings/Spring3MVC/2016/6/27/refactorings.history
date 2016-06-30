@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;net.viralpatel.spring3.controller&apos; to &apos;basicmvc/src&apos;&#x0D;&#x0A;- Original project: &apos;Spring3MVC&apos;&#x0D;&#x0A;- Destination element: &apos;basicmvc/src&apos;&#x0D;&#x0A;- Original element: &apos;Spring3MVC/src/net.viralpatel.spring3.controller&apos;" description="Copy package" destination="=basicmvc/src" element1="/src&lt;net.viralpatel.spring3.controller" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1467281064869" version="1.0"/>
+</session>

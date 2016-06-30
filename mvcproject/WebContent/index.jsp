@@ -6,6 +6,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="Hello.html">click</a>
+<a href="hello.html">click</a>
 </body>
 </html>
