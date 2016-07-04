@@ -1,0 +1,86 @@
+package com.student;
+
+import java.util.Scanner;
+
+import org.springframework.beans.factory.BeanFactory;  
+import org.springframework.beans.factory.xml.XmlBeanFactory;  
+import org.springframework.core.io.ClassPathResource;  
+import org.springframework.core.io.Resource;  
+  
+public class InsertTest {  
+@SuppressWarnings("resource")
+public static void main(String[] args) {
+	int d=0;
+	do{
+	int a;
+	int c=1;
+	 Employee e=new Employee();
+	 Resource r=new ClassPathResource("com/student/applicationContext.xml");  
+	    BeanFactory factory=new XmlBeanFactory(r);
+	EmployeeDao dao=(EmployeeDao)factory.getBean("d");
+	Scanner n = new Scanner(System.in);
+		try{
+		System.out.println("Welcome to new employee");
+		System.out.println("1. insert the record");
+		System.out.println("2. delete the record");
+		
+		
+		c= n.nextInt();
+		}
+	catch (Exception g) {
+		// TODO: handle exception
+		System.out.println("enter differ option");
+	}	
+		switch (c) {
+		case 1:
+			try{ 
+				   
+				      float b;
+				      String s;
+				 
+				      Scanner in = new Scanner(System.in);
+				      
+				      System.out.println("Enter the name of employee");
+				      s = in.nextLine();
+				 
+				      System.out.println("Enter a id");
+				      a = in.nextInt();
+				 
+				      System.out.println("Enter employee salary");
+				      b = in.nextFloat(); 
+		     
+		      
+		     
+		    e.setId(a);  
+		    e.setName(s);  
+		    e.setSalary(b);  
+		    dao.saveEmployee(e);
+			}
+			 catch (Exception f) {
+			    	 System.out.println("Sorry we can't insert this value \n try another id as it is unique");
+			     }
+				   
+			break;
+
+		case 2:
+			System.out.println("enter the id to which you want to delete the record");
+			System.out.println("Enter a id");
+		      a = n.nextInt();
+		      e.setId(a);
+		      dao.deleteEmployee(e);
+			
+			break;
+		
+		
+		default:
+			System.out.println("enter another entery");
+			break;
+		}
+		
+		System.out.println("want to enter again if yes press 1");
+		   d= n.nextInt();
+    
+		}while(d==1);
+	
+}  
+}  
