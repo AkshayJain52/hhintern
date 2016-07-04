@@ -1,0 +1,13 @@
+package com.hhin;
+
+public class Snippet {
+	com.springsource.org.apache.commons.logging-1.1.1.jar
+	com.springsource.org.apache.log4j-1.2.15.jar
+	jmxtools-1.2.1.jar
+	org.springframework.asm-3.0.1.RELEASE-A.jar
+	org.springframework.beans-3.0.1.RELEASE-A.jar
+	org.springframework.context-3.0.1.RELEASE-A.jar
+	org.springframework.core-3.0.1.RELEASE-A.jar
+	org.springframework.expression-3.0.1.RELEASE-A.jar
+}
+
