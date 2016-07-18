@@ -8,7 +8,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+
 import com.resume.validator.indexvalidator;
+
+
+
 //this a controller class use to check the validation using indexvalidation class stored in com.resume.validator package
 @Controller
 public class indexcontroller {
@@ -21,6 +26,12 @@ public class indexcontroller {
 						
 		    return "index";
 		} 
+		
+		/*HttpServletRequest request;
+		String url =request.getRequestURL()+"?"+request.getQueryString();
+		String arg = url;
+		*/
+		
 		
 		return "welcome";
         

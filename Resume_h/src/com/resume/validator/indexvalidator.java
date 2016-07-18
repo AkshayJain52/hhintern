@@ -14,14 +14,13 @@ public class indexvalidator {
 	@Email
 	private String email_id ;
 	@NotNull
-	private String phone_no ;
+	private int phone_no ;
 	private String address ;
 	private String another_contact_information;
 	private String work_experience;
 	private String work_position;
 	private String company_name;
 	private String work_task;
-	@NotNull
 	private String personal_projects1;
 	private String personal_projects2;
 	private String personal_projects3;
@@ -113,27 +112,27 @@ public class indexvalidator {
 		this.interests = interests;
 	}
 	public String getFirst_name() {
-		return First_name;
+		return First_name.toUpperCase();
 	}
 	public void setFirst_name(String first_name) {
-		First_name = first_name;
+		First_name = first_name.toUpperCase();
 	}
 	public String getFamily_name() {
-		return Family_name;
+		return Family_name.toUpperCase();
 	}
 	public void setFamily_name(String family_name) {
-		Family_name = family_name;
+		Family_name = family_name.toUpperCase();
 	}
 	public String getEmail_id() {
-		return email_id;
+		return email_id.toLowerCase();
 	}
 	public void setEmail_id(String email_id) {
-		this.email_id = email_id;
+		this.email_id = email_id.toLowerCase();
 	}
-	public String getPhone_no() {
+	public int getPhone_no() {
 		return phone_no;
 	}
-	public void setPhone_no(String phone_no) {
+	public void setPhone_no(int phone_no) {
 		this.phone_no = phone_no;
 	}
 	public String getAddress() {

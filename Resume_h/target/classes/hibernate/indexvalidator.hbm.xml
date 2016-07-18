@@ -1,0 +1,37 @@
+<!-- 
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+
+  
+<hibernate-mapping>  
+<class name="com.resume.indexvalidator" table="record">  
+          <id name="email">  
+          <generator class="assigned"></generator>  
+          </id>  
+          <property name="First_name"></property>
+		  <property name="Family_name"></property>
+	      <property name="phone_no"></property>
+		  <property name="address"></property>
+		  <property name="another_contact_information"></property>
+		  <property name="work_experience"></property>
+	  	  <property name="work_position"></property>
+		  <property name="company_name"></property>
+		  <property name="work_task"></property>
+	 	  <property name="personal_projects1"></property>
+		  <property name="personal_projects2"></property>
+		  <property name="personal_projects3"></property>
+		  <property name="personal_projects4"></property>
+		  <property name="education"></property>
+		  <property name="education_courses"></property>
+		  <property name="skills1"></property>
+		  <property name="skills2"></property>
+		  <property name="skills3"></property>
+		  <property name="achievements"></property>
+		  <property name="certificates"></property>
+		  <property name="interests"></property>  
+</class>  
+            
+</hibernate-mapping>
+ -->

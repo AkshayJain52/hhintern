@@ -25,25 +25,20 @@ public class downloadcontroller {
         
  
 	try {
-		 String url,url2,url3;
+		 String url;
+		 String pdf,doc;
 	        
 	        
-	       
 	        url = request.getRequestURL()+"?"+request.getQueryString();//url of the html page
-
-	        
-	        url2 = "Resume.pdf";//url or location of pdf to which it to be stored
-			
-	      
-	    url3 ="Resume.docx";//url or location of doc to which it to be stored
+	        pdf = "Resume.pdf";//url or location of pdf to which it to be stored
+	        doc ="Resume.docx";//url or location of doc to which it to be stored
 	        
 		
      
        //get the html code of the html page;
        URL yahoo = new URL(url);
        URLConnection yc = yahoo.openConnection();
-       BufferedReader in = new BufferedReader(new InputStreamReader(
-               yc.getInputStream(), "UTF-8"));  //geting the code into buffered reader        
+       BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream(), "UTF-8"));  //geting the code into buffered reader        
       
        
        
@@ -53,7 +48,7 @@ public class downloadcontroller {
        StringBuilder a = new StringBuilder();
        while ((inputLine = in.readLine()) != null)
            a.append(inputLine);
-       FileOutputStream fout=new FileOutputStream(url3);  
+       FileOutputStream fout=new FileOutputStream(doc);  
        
        String ar = a.toString();
        
@@ -68,13 +63,11 @@ public class downloadcontroller {
     
        
        
-       
 
        // the module for html page to pdf document;
        try
        {
-           String htmlFilePath = url;
-           ProcessBuilder pb = new ProcessBuilder("wkhtmltopdf.exe", htmlFilePath, url2);
+           ProcessBuilder pb = new ProcessBuilder("wkhtmltopdf.exe", url, pdf);
            pb.redirectErrorStream(true);
            Process process = pb.start();
            BufferedReader inStreamReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
@@ -90,7 +83,7 @@ public class downloadcontroller {
        }
        catch(Exception e)
        {
-          return("download");
+          return("");
        }
             
                  

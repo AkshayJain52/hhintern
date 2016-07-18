@@ -8,13 +8,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action = "welcome.jsp" method="get">
-<input style="color: #f00" name = "First_name" type="text" value="Your first name" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'Your first name') {this.style.color='#0f0'; this.value=''}">
-<input style="color: #f00" name = "Family_name" type="text" value="Family_name" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'Family_name') {this.style.color='#0f0'; this.value=''}">
+ <form action = "welcome.jsp" method="get">
+*<input style="color: #f00" name = "First_name" type="text" value="Your first name" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'Your first name') {this.style.color='#0f0'; this.value=''}">
+*<input style="color: #f00" name = "Family_name" type="text" value="Family_name" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'Family_name') {this.style.color='#0f0'; this.value=''}">
 <br><br>
-<input style="color: #f00" name = "email_id" type="text" value="Your email" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'Your email') {this.style.color='#0f0'; this.value=''}">
+*<input style="color: #f00" name = "email_id" type="text" value="Your email" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'Your email') {this.style.color='#0f0'; this.value=''}">
 <br><br>
-<input style="color: #f00" name = "phone_no" type="text" value="phone_no" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'phone_no') {this.style.color='#0f0'; this.value=''}">
+*<input style="color: #f00" name = "phone_no" type="text" value="phone_no" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'phone_no') {this.style.color='#0f0'; this.value=''}">
 <br><br>
 <textarea style="color: #f00" name = "address" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'address') {this.style.color='#0f0'; this.value=''}">
 address</textarea>
@@ -69,7 +69,7 @@ None:
 <br><br>
 <input style="color: #f00" name = "interests" type="text" value="interests" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'interests') {this.style.color='#0f0'; this.value=''}">
 <br><br>
-<input type = "submit" value = "save">
+<input type = "submit" value = "save"> 
 </form>
 </body>
 </html>

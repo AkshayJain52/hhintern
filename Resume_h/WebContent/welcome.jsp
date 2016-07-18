@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!--  <form action = "index.jsp" method="get"> -->
 <!-- getting the parameter from index page  -->
 <%
 		String First_name=request.getParameter("First_name");
@@ -43,7 +44,7 @@
 		out.println(address+"<br>");
 		out.println("<b>Another_contact_information<br></b>");
 		%>
-		<!-- printing the professional  -->
+		<!-- printing the professional details  -->
 		<%
 		out.println(another_contact_information+"<br><br>");
 		out.println("<b>Work_experience<br></b>");
@@ -69,10 +70,17 @@
 		out.println(certificates+"<br>");
 		out.println("<b>Interests<br></b>");
 		out.println(interests+"<br>");
+		
+		
+		//geting the url of the welcome page if required
+		
+		
 		//String url=request.getRequestURL()+"?"+request.getQueryString();
 %>
 
 <!-- link to download the page in pdf and docx  -->
         <a href="download.jsp">download</a>
+ <!-- link to resend to index page -->
+<!--  <input type = "submit" value = "Edit"> </form>--> 		
 </body>
 </html>
