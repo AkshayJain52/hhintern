@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
- <form action = "welcome.jsp" method="get">
+ <form action = "welcome" method="get">
 *<input style="color: #f00" name = "First_name" type="text" value="Your first name" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'Your first name') {this.style.color='#0f0'; this.value=''}">
 *<input style="color: #f00" name = "Family_name" type="text" value="Family_name" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'Family_name') {this.style.color='#0f0'; this.value=''}">
 <br><br>

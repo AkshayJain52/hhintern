@@ -1,0 +1,3 @@
+com\resume\controller\downloadcontroller.class
+com\resume\controller\indexcontroller.class
+com\resume\validator\indexvalidator.class

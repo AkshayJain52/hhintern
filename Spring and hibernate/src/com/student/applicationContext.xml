@@ -21,7 +21,6 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
         <value>com/student/Employee.hbm.xml</value>  
         </list>  
         </property>
-          
         <property name="hibernateProperties">  
             <props>  
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>  
