@@ -18,7 +18,7 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
         <property name="mappingResources">  
         <list>  
-        <value>com/student/Employee.hbm.xml</value>  
+        <value>com/resume/indexvalidator.hbm.xml</value>  
         </list>  
         </property>
         <property name="hibernateProperties">  
@@ -34,7 +34,7 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
     <property name="sessionFactory" ref="mysessionFactory"></property>  
     </bean>
       
-    <bean id="d" class="com.student.EmployeeDao" autowire="byName">  
+    <bean id="d" class="com.resume.indexvalidatorDao" autowire="byName">  
     <property name="template" ref="template"></property>  
     </bean>  
 </beans>  
