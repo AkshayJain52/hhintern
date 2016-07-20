@@ -5,9 +5,10 @@
   <artifactId>Resume_h</artifactId>
   <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-  <build>
+    <build>
+    <finalName>Resume</finalName>
     <sourceDirectory>src</sourceDirectory>
-    <resources>
+      <resources>
       <resource>
         <directory>src</directory>
         <excludes>
@@ -35,28 +36,19 @@
     
   </build>
       <properties>
-   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  <project.resources.sourceEncoding>UTF-8</project.resources.sourceEncoding>
-</properties>
-
- <!--  <properties>
-    <jdk.version>1.8</jdk.version>
+   <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+  <project.resources.sourceEncoding>ISO-8859-1</project.resources.sourceEncoding>
+    <jdk.version>1.7</jdk.version>
     <spring.version>3.0.5.RELEASE</spring.version>
     <jstl.version>1.2</jstl.version>
     <junit.version>4.11</junit.version>
-</properties>-->
+</properties>
   <dependencies>
 <dependency>
      <groupId>org.springframework</groupId>
      <artifactId>spring-web</artifactId>
      <version>3.0.5.RELEASE</version>
 </dependency>
-   <!-- https://mvnrepository.com/artifact/ojb/xdoclet-ojb-module 
-<dependency>
-    <groupId>ojb</groupId>
-    <artifactId>xdoclet-ojb-module</artifactId>
-    <version>1.2.1</version>
-</dependency>-->
 <!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
 <dependency>
     <groupId>org.springframework</groupId>
@@ -83,7 +75,6 @@
      <artifactId>spring-webmvc</artifactId> 
      <version>3.0.5.RELEASE </version> 
 </dependency> 
-
 
 <dependency>
     <groupId>org.apache.servicemix.bundles</groupId>
@@ -115,7 +106,6 @@
     <version>2.5.1</version>
 </dependency>
  
- 
 <dependency>
     <groupId>javax.servlet</groupId>
     <artifactId>servlet-api</artifactId>
@@ -128,5 +118,5 @@
     <version>4.3.1.RELEASE</version>
 </dependency>
     </dependencies>
-
+    
 </project>

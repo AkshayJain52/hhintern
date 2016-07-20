@@ -4,16 +4,12 @@ import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
 import java.net.URL;
 import java.net.URLConnection;
 import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-
 
 @Controller
 public class downloadcontroller {
@@ -59,10 +55,6 @@ public class downloadcontroller {
        in.close();         
            
        
-       
-    
-       
-       
 
        // the module for html page to pdf document;
        try
@@ -79,29 +71,14 @@ public class downloadcontroller {
                        
                        line = inStreamReader.readLine();
                    }
-                   System.out.println("success");
-       }
+        }
        catch(Exception e)
        {
-          return("");
+          return("index");
        }
-            
-                 
-       
-       
-       
 	} catch (IOException e) {
 		//e.printStackTrace();
 		}
 	return ("welcome");
-	
-	
-	
-	}
-	
-	
-	
-	
+	}	
 }
-	
-
