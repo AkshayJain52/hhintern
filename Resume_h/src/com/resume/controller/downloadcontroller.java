@@ -18,25 +18,19 @@ public class downloadcontroller {
 	@RequestMapping(value= "/download",method = RequestMethod.POST)
 	 public String downloadCSV() throws IOException {
         
-        
- 
 	try {
 		 String url;
 		 String pdf,doc;
-	        
-	        
+	            
 	        url = request.getRequestURL()+"?"+request.getQueryString();//url of the html page
 	        pdf = "Resume.pdf";//url or location of pdf to which it to be stored
 	        doc ="Resume.docx";//url or location of doc to which it to be stored
 	        
-		
      
        //get the html code of the html page;
        URL yahoo = new URL(url);
        URLConnection yc = yahoo.openConnection();
-       BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream(), "UTF-8"));  //geting the code into buffered reader        
-      
-       
+       BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream(), "ISO-8859-1"));  //geting the code into buffered reader        
        
        
        //geting code into word file

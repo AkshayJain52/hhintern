@@ -33,6 +33,7 @@ public class indexvalidator {
 	private String achievements;
 	private String certificates;
 	private String interests;
+	
 	public String getWork_task() {
 		return work_task;
 	}
