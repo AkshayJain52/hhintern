@@ -24,12 +24,12 @@
           <source>1.7</source>
           <target>1.7</target>
         </configuration>
-      </plugin> 
+      </plugin>
      <plugin>
             <artifactId>maven-war-plugin</artifactId>
             <version>2.4</version>
             <configuration>
-                <failOnMissingWebXml>false</failOnMissingWebXml>    
+                <failOnMissingWebXml>false</failOnMissingWebXml>
             </configuration>
         </plugin>
     </plugins>
@@ -49,11 +49,10 @@
      <artifactId>spring-web</artifactId>
      <version>3.0.5.RELEASE</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
 <dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-aop</artifactId>
-    <version>3.0.5.RELEASE</version>
+     <groupId>org.springframework</groupId>
+     <artifactId>spring-webmvc</artifactId>
+     <version>3.0.5.RELEASE </version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
 <dependency>
@@ -68,17 +67,7 @@
     <version>2.5.6</version>
 </dependency>
    
-<dependency> 
-     <groupId>org.springframework</groupId> 
-     <artifactId>spring-webmvc</artifactId> 
-     <version>3.0.5.RELEASE </version> 
-</dependency> 
 
-<dependency>
-    <groupId>org.apache.servicemix.bundles</groupId>
-    <artifactId>org.apache.servicemix.bundles.aopalliance</artifactId>
-    <version>1.0_4</version>
-</dependency>
 
 <dependency>
     <groupId>javax.validation</groupId>
@@ -116,5 +105,5 @@
     <version>4.3.1.RELEASE</version>
 </dependency>
     </dependencies>
-    
+        
 </project>

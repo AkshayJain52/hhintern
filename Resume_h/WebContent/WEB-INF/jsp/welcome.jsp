@@ -10,7 +10,7 @@
 <!--  <form action = "index.jsp" method="get"> -->
 <!-- getting the parameter from index page  -->
 
-<%
+		<%
 		String First_name=request.getParameter("First_name");
 		String Family_name=request.getParameter("Family_name");
 		String email_id=request.getParameter("email_id");
@@ -33,10 +33,8 @@
 		String achievements=request.getParameter("achievements");
 		String certificates=request.getParameter("certificates");
 		String interests=request.getParameter("interests");
-	%>
-		
+		%>
 		<!-- printing the name and other personal details  -->
-		
 		<%
 		out.println(First_name);
 		out.println(Family_name+"<br>");
@@ -71,10 +69,7 @@
 		out.println(certificates+"<br>");
 		out.println("<b>Interests<br></b>");
 		out.println(interests+"<br>");
-		
-		
 		//geting the url of the welcome page if required
-		
 		
 		//String url=request.getRequestURL()+"?"+request.getQueryString();
 %>

@@ -17,7 +17,6 @@ public class downloadcontroller {
 	//controller which trace the url and wait for download
 	@RequestMapping(value= "/download",method = RequestMethod.POST)
 	 public String downloadCSV() throws IOException {
-        
 	try {
 		 String url;
 		 String pdf,doc;
@@ -38,18 +37,14 @@ public class downloadcontroller {
        StringBuilder a = new StringBuilder();
        while ((inputLine = in.readLine()) != null)
            a.append(inputLine);
-       FileOutputStream fout=new FileOutputStream(doc);  
-       
+       FileOutputStream fout=new FileOutputStream(doc);
        String ar = a.toString();
-       
        byte b[]=ar.getBytes();//converting string into byte array  
        
-       fout.write(b); 
+       fout.write(b);
        fout.close();
        in.close();         
            
-       
-
        // the module for html page to pdf document;
        try
        {

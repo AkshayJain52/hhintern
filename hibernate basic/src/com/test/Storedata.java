@@ -22,8 +22,8 @@ public class Storedata {
 	    Transaction t=session.beginTransaction();  
 	          
 	    Employee e1=new Employee();  
-	    count= e1.setId(1212);  
-	    e1.setName('d');
+	    count= e1.setId(1111);  
+	    e1.setName('s');
 	    session.persist(e1);//persisting the object  
 	      
 	    t.commit();//transaction is committed  

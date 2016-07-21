@@ -15,13 +15,23 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class downloadcontroller {
 	HttpServletRequest request;
 	//controller which trace the url and wait for download
-	@RequestMapping(value= "/download",method = RequestMethod.POST)
-	 public String downloadCSV() throws IOException {
+	@RequestMapping(value= "/download",method = RequestMethod.GET)
+	//public String welcome() {
+			
+
+		// Spring uses InternalResourceViewResolver and return back download.jsp
+		
+
+	
+	 
+	
+	public String downloadCSV() throws IOException {
 	try {
 		 String url;
 		 String pdf,doc;
 	            
-	        url = request.getRequestURL()+"?"+request.getQueryString();//url of the html page
+	        url = "http://stackoverflow.com/questions/14491093/javaspring-severe-servletservice";
+	        		//request.getRequestURL()+"?"+request.getQueryString();//url of the html page
 	        pdf = "Resume.pdf";//url or location of pdf to which it to be stored
 	        doc ="Resume.docx";//url or location of doc to which it to be stored
 	        
@@ -46,8 +56,7 @@ public class downloadcontroller {
        in.close();         
            
        // the module for html page to pdf document;
-       try
-       {
+      
            ProcessBuilder pb = new ProcessBuilder("wkhtmltopdf.exe", url, pdf);
            pb.redirectErrorStream(true);
            Process process = pb.start();
@@ -60,14 +69,11 @@ public class downloadcontroller {
                        
                        line = inStreamReader.readLine();
                    }
-        }
-       catch(Exception e)
-       {
-          return("index");
-       }
+      
 	} catch (IOException e) {
 		//e.printStackTrace();
 		}
-	return ("welcome");
-	}	
+		return "download";
+	}
+	
 }

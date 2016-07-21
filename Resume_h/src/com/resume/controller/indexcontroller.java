@@ -21,15 +21,11 @@ public class indexcontroller {
 	 public String doLogin(@Valid indexvalidator user, BindingResult result) {
 		if (result.hasErrors()) {
 			
-						
 		    return "index";
 		} 
 		
-		
 		String url =request.getRequestURL()+"?"+request.getQueryString();
 		System.out.println(url);
-		
-		
 		
 		return "welcome";
         
