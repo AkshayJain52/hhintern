@@ -33,7 +33,7 @@ public class indexcontroller {
 	@RequestMapping(value = "/welcome", method = RequestMethod.GET)
 	public String welcomeName(@Valid indexvalidator indexvalidator,BindingResult bindingResult, Model model) {
 		if (bindingResult.hasErrors()) {
-			logger.info("Returning index.jsp page");
+		logger.info("Returning index.jsp page");
 			return "index";
 		}
 		logger.info("Returning welcome.jsp page");

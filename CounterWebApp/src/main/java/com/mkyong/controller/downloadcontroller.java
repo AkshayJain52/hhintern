@@ -14,17 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class downloadcontroller {
 	HttpServletRequest request;
-	//controller which trace the url and wait for download
+	// Spring uses InternalResourceViewResolver and return back download.jsp
 	@RequestMapping(value= "/download",method = RequestMethod.GET)
-	//public String welcome() {
-			
 
-		// Spring uses InternalResourceViewResolver and return back download.jsp
 		
-
-	
-	 
-	
 	public String downloadCSV() throws IOException {
 	try {
 		 String url;
