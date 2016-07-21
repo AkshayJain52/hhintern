@@ -14,7 +14,7 @@ import org.springframework.validation.ValidationUtils;
 public class indexfromvalidator implements Validator 
 {
  
-    public boolean supports(Class indexvalidator) {
+    public boolean supports(@SuppressWarnings("rawtypes") Class indexvalidator) {
         return indexvalidator.class.isAssignableFrom(indexvalidator);
     }
  
