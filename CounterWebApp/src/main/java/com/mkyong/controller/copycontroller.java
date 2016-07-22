@@ -21,7 +21,7 @@ package com.mkyong.controller;
 	public class copycontroller {
 	     
 	    private static final String INTERNAL_FILE="Resume.pdf";
-	    private static final String EXTERNAL_FILE_PATH="C:/Users/HHEXUSER/Desktop/hhintern/HTML-TO-doc";
+	    private static final String EXTERNAL_FILE_PATH="C:/Users/HHEXUSER/Desktop";
 	     
 	 
 	    /*@RequestMapping(value={"/download"}, method = RequestMethod.GET)
