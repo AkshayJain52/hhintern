@@ -16,7 +16,7 @@ package com.mkyong.controller;
 	import org.springframework.web.bind.annotation.PathVariable;
 	import org.springframework.web.bind.annotation.RequestMapping;
 	import org.springframework.web.bind.annotation.RequestMethod;
-	 
+	 // give the download to browser
 	@Controller
 	public class copycontroller {
 	     
@@ -34,6 +34,7 @@ package com.mkyong.controller;
 	     *   - inside project, located in resources folder.
 	     *   - outside project, located in File system somewhere. 
 	     */
+	    //hello url controller which is never used
 	    @RequestMapping(value="/hello", method = RequestMethod.GET)
 	    public void downloadFile(HttpServletResponse response, @PathVariable("type") String type) throws IOException {
 	     

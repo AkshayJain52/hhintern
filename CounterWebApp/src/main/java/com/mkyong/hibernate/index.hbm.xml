@@ -1,0 +1,15 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+    <class name="com.mkyong.controller.indexvalidator" table="index" catalog="akshay">
+        <id name="indexId" type="java.lang.Long">
+            <column name="index_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="indexCode" type="string">
+            <column name="index_CODE" length="10" not-null="true" unique="true" />
+        </property>
+        <property name="indexName" type="string">
+            <column name="index_NAME" length="20" not-null="true" unique="true" />
+        </property>
+    </class>
+</hibernate-mapping>-->
