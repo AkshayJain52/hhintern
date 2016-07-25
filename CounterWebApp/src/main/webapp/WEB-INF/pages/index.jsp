@@ -68,7 +68,7 @@ None:
 <br><br>
 <input style="color: #f00" name = "interests" type="text" value="interests" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'interests') {this.style.color='#0f0'; this.value=''}">
 <br><br>
-<input type = "submit" value = "save"> 
+<input type = "submit" value = "save" > 
 </form>
 </body>
 </html>

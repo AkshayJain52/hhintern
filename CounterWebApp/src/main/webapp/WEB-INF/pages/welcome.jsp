@@ -75,8 +75,9 @@
 %>
  
 <!-- link to download the page in pdf and docx  -->
-        <a href="download">download</a>
- <!-- link to resend to index page -->
-<!--  <input type = "submit" value = "Edit"> </form>--> 		
+        <a href="downloadpdf" shape="circle">downloadpdf</a>
+        <br><br>
+        <a href="downloaddocx" shape="circle">downloaddocx</a>
+  		
 </body>
 </html>
