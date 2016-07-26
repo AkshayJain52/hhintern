@@ -20,7 +20,6 @@ import javax.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -32,25 +31,27 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @Controller
 public class mastercontroller extends WebMvcConfigurerAdapter {
 	
-
 	public String url,First_name;
 	String filename,filename1;
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String welcome() {
-			
-
+	public String welcome() {		
 		// Spring uses InternalResourceViewResolver and return back index.jsp
 		return "index";
-
 	}
+	
+	
 	private static final Logger logger = LoggerFactory.getLogger(mastercontroller.class);
 	private Map<String, indexvalidator> indexs;
+	
+	
 	@RequestMapping(value = "/welcome", method = RequestMethod.GET)
 	public String welcomeName(@Valid indexvalidator indexvalidator,BindingResult bindingResult, Model model,HttpServletRequest request) throws IOException {
+		
 		if (bindingResult.hasErrors()) {
 		logger.info("Returning index.jsp page");
 			return "index";
 		}
+		
 		logger.info("Returning welcome.jsp page");
 		model.addAttribute("indexvalidator", indexvalidator);
 		url= request.getRequestURL()+"?"+request.getQueryString();
@@ -59,6 +60,8 @@ public class mastercontroller extends WebMvcConfigurerAdapter {
 				
 		return "welcome";
 	}
+	
+	
 	@RequestMapping(value= "/download_pdf",method = RequestMethod.GET)
 	public String downloadCSV(HttpServletRequest request,HttpServletResponse response) throws IOException {
 
@@ -68,7 +71,9 @@ public class mastercontroller extends WebMvcConfigurerAdapter {
     pb.redirectErrorStream(true);
     
     BufferedReader inStreamReader = new BufferedReader(new InputStreamReader(pb.start().getInputStream()));
-           while(inStreamReader.readLine() != null)
+    
+    
+    while(inStreamReader.readLine() != null)
             {
                 
                inStreamReader.readLine();
@@ -123,6 +128,8 @@ public class mastercontroller extends WebMvcConfigurerAdapter {
            while ((i1=fileInputStream1.read()) != -1) {  
            out1.write(i1);
            }
+           
+           
            fileInputStream1.close();   
            out1.close();
 
