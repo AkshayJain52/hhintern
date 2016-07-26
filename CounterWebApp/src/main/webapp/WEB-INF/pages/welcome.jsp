@@ -36,9 +36,9 @@
 		%>
 		<!-- printing the name and other personal details  -->
 		<%
-		out.println(First_name);
-		out.println(Family_name+"<br>");
-		out.println(email_id+"<br>");
+		out.println(First_name.toUpperCase());
+		out.println(Family_name.toUpperCase()+"<br>");
+		out.println(email_id.toLowerCase()+"<br>");
 		out.println(phone_no+"<br>");
 		out.println(address+"<br>");
 		out.println("<b>Another_contact_information<br></b>");
@@ -69,15 +69,12 @@
 		out.println(certificates+"<br>");
 		out.println("<b>Interests<br></b>");
 		out.println(interests+"<br>");
-		//geting the url of the welcome page if required
-		
-		String url=request.getRequestURL()+"?"+request.getQueryString();
 %>
  
 <!-- link to download the page in pdf and docx  -->
-        <a href="downloadpdf" shape="circle">downloadpdf</a>
+        <a href="download_pdf" shape="circle">downloadpdf</a>
         <br><br>
-        <a href="downloaddocx" shape="circle">downloaddocx</a>
+        <a href="download_docx" shape="circle">downloaddocx</a>
   		
 </body>
 </html>

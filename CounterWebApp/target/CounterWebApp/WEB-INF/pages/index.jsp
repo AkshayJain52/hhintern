@@ -24,27 +24,27 @@ Phone_no.:
 Address:
 <textarea style="color: #f00" name = "address" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'address') {this.style.color='#0f0'; this.value=''}">
 address</textarea>
+
 <br><br>
 Another contact information :
-<br><br> 
+<br> 
 Facebook:
-<input type = "radio" name = "another_contact_information" value = "Facebook">
+<input type = "radio" name = "another_contact_information" value = "www.facebook.com">
 Skype:
 <input type = "radio" name = "another_contact_information" value = "Skype">
-<br><br>
+
 Website:
 <input type = "radio" name = "another_contact_information" value = "Website">
 Linkedin:
 <input type = "radio" name = "another_contact_information" value = "Linkedin">
-<br><br>
+
 Github:
 <input type = "radio" name = "another_contact_information" value = "Github">
 None:
-<input type = "radio" name = "another_contact_information" value = "none" checked="checked">
+<input type = "radio" name = "another_contact_information" value = "none" checked="checked" >
 <br><br>
 Work_experience:
 <input style="color: #f00" name = "work_experience" type="text" value="work_experience" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'work_experience') {this.style.color='#0f0'; this.value=''}">
-<br><br>
 Work_position:
 <input style="color: #f00" name = "work_position" type="text" value="work_position" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'work_position') {this.style.color='#0f0'; this.value=''}">
 <br><br>
@@ -56,7 +56,6 @@ Work_task:
 <br><br>
 Projects:
 <input style="color: #f00" name = "personal_projects1" type="text" value="personal_projects1" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'personal_projects1') {this.style.color='#0f0'; this.value=''}">
-
 <input style="color: #f00" name = "personal_projects2" type="text" value="personal_projects2" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'personal_projects2') {this.style.color='#0f0'; this.value=''}">
 
 <input style="color: #f00" name = "personal_projects3" type="text" value="personal_projects3" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'personal_projects3') {this.style.color='#0f0'; this.value=''}">
@@ -65,7 +64,6 @@ Projects:
 <br><br>
 Education:
 <input style="color: #f00" name = "education" type="text" value="education" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'education') {this.style.color='#0f0'; this.value=''}">
-<br><br>
 Education_courses:
 <input style="color: #f00" name = "education_courses" type="text" value="education_courses" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'education_courses') {this.style.color='#0f0'; this.value=''}">
 <br><br>
@@ -81,11 +79,10 @@ Achievements:
 <br><br>
 Certificates:
 <input style="color: #f00" name = "certificates" type="text" value="certificates" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'certificates') {this.style.color='#0f0'; this.value=''}">
-<br><br>
 Interests:
 <input style="color: #f00" name = "interests" type="text" value="interests" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'interests') {this.style.color='#0f0'; this.value=''}">
 <br><br>
-<input type = "submit" value = "save" > 
+<input type = "submit" value = "save"  > 
 </form>
 </body>
 </html>
