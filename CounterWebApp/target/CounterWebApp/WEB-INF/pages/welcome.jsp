@@ -71,12 +71,13 @@
 		out.println(interests+"<br>");
 		//geting the url of the welcome page if required
 		
-		//String url=request.getRequestURL()+"?"+request.getQueryString();
+		String url=request.getRequestURL()+"?"+request.getQueryString();
 %>
-
+ 
 <!-- link to download the page in pdf and docx  -->
-        <a href="download.jsp">download</a>
- <!-- link to resend to index page -->
-<!--  <input type = "submit" value = "Edit"> </form>--> 		
+        <a href="downloadpdf" shape="circle">downloadpdf</a>
+        <br><br>
+        <a href="downloaddocx" shape="circle">downloaddocx</a>
+  		
 </body>
 </html>

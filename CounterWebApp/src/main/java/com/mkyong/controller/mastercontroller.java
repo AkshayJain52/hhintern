@@ -32,6 +32,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class mastercontroller {
 
 	public String url;
+	String filename = "Resume.pdf";
+	String filename1 = "Resume.docx";
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String welcome() {
 			
@@ -60,32 +62,9 @@ public class mastercontroller {
 	@RequestMapping(value= "/downloadpdf",method = RequestMethod.GET)
 	public String downloadCSV(HttpServletRequest request,HttpServletResponse response) throws IOException {
       
-  
- // get the html code of the html page;
- URL yahoo = new URL(url);
-  URLConnection yc = yahoo.openConnection();
-  BufferedReader in1 = new BufferedReader(new InputStreamReader(
-         yc.getInputStream(), "UTF-8"));  //geting the code into buffered reader
- 
-  
-  //geting code into word file
-  String inputLine;
-  StringBuilder a = new StringBuilder();
-  while ((inputLine = in1.readLine()) != null)
-     a.append(inputLine);
-  FileOutputStream fout=new FileOutputStream("Resume.docx");
-  byte b[]=a.toString().getBytes();//converting string into byte array  
-  
-  fout.write(b);
-  fout.close();
-  in1.close();
-
- 
-  
-
 	//pdf convertor code which need .exe file to run the code but .exe file is inc. the ram consumption 
 	ProcessBuilder pb = new ProcessBuilder( "C:/Users/HHEXUSER/Desktop/hhintern/CounterWebApp/wkhtmltopdf.exe",
-  		  url, "resume.pdf");
+  		  url,filename);
     pb.redirectErrorStream(true);
     
     BufferedReader inStreamReader = new BufferedReader(new InputStreamReader(pb.start().getInputStream()));
@@ -99,28 +78,48 @@ public class mastercontroller {
           
            response.setContentType("pdf/docx");  
            PrintWriter out = response.getWriter();  
-           String filename = "resume.pdf";   
+              
            String filepath = "C:/Users/HHEXUSER/Desktop/";   
            response.setContentType("APPLICATION/OCTET-STREAM");   
            response.setHeader("Content-Disposition","attachment; filename=\"" + filename + "\"");  
              
            FileInputStream fileInputStream = new FileInputStream(filepath + filename);          
-           int i;   
-           while ((i=fileInputStream.read()) != -1) {  
-           out.write(i);   
+           int i1;   
+           while ((i1=fileInputStream.read()) != -1) {  
+           out.write(i1);   
            }   
            fileInputStream.close();
            out.close();
 		return "index";  
            
 	} 
-           @RequestMapping(value= "/downloaddocx",method = RequestMethod.GET)
-       	public String downloadCSV2(HttpServletRequest request,HttpServletResponse response) throws IOException {
-             
           
+		@RequestMapping(value= "/downloaddocx",method = RequestMethod.GET)
+       	public String downloadCSV2(HttpServletRequest request,HttpServletResponse response) throws IOException {
+			
+			
+			
+			// get the html code of the html page;
+			 URL yahoo = new URL(url);
+			  URLConnection yc = yahoo.openConnection();
+			  BufferedReader in1 = new BufferedReader(new InputStreamReader(
+			         yc.getInputStream(), "UTF-8"));  //geting the code into buffered reader
+			 
+			  
+			  //geting code into word file
+			  String inputLine;
+			  StringBuilder a = new StringBuilder();
+			  while ((inputLine = in1.readLine()) != null)
+			     a.append(inputLine);
+			  FileOutputStream fout=new FileOutputStream(filename1);
+			  byte b[]=a.toString().getBytes();//converting string into byte array  
+			  
+			  fout.write(b);
+			  fout.close();
+			  in1.close();  
            response.setContentType("docx/pdf");  
            PrintWriter out1 = response.getWriter();  
-           String filename1 = "Resume.docx";   
+             
            String filepath1 = "C:/Users/HHEXUSER/Desktop/";   
            response.setContentType("APPLICATION/OCTET-STREAM");   
            response.setHeader("Content-Disposition","attachment; filename=\"" + filename1 + "\"");   
