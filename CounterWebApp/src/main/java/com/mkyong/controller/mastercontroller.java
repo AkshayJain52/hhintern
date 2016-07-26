@@ -1,6 +1,7 @@
 package com.mkyong.controller;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -91,6 +92,24 @@ public class mastercontroller extends WebMvcConfigurerAdapter {
            }
            fileInputStream.close();
            out.close();
+           
+           
+           
+        // delete the file by giving the file to user
+           try{
+       		
+       		File file = new File(filename);
+           	
+       		if(file.delete()){
+       			System.out.println(file.getName() + " is deleted!");
+       		}else{
+       			System.out.println("Delete operation is failed.");
+       		}
+       	   
+       	}catch(Exception e){
+       		
+       		e.printStackTrace();
+       		}
 		return "index";
 
 	}
@@ -128,10 +147,25 @@ public class mastercontroller extends WebMvcConfigurerAdapter {
            while ((i1=fileInputStream1.read()) != -1) {  
            out1.write(i1);
            }
-           
-           
            fileInputStream1.close();   
            out1.close();
+           
+           
+        // delete the file by giving the file to user
+           try{
+          		
+          		File file = new File(filename1);
+              	
+          		if(file.delete()){
+          			System.out.println(file.getName() + " is deleted!");
+          		}else{
+          			System.out.println("Delete operation is failed.");
+          		}
+          	   
+          	}catch(Exception e){
+          		
+          		e.printStackTrace();
+          		}
 
 		return "index";
 	}
