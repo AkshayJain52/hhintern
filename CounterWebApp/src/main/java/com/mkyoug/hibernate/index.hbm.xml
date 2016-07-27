@@ -8,7 +8,6 @@
         <property name="indexCode" type="string">
             <column name="index_CODE" length="10" not-null="true" unique="true" />
         </property>
-        
     <property name="First_name" type="string">
     <column name ="First_name" />
     </property>

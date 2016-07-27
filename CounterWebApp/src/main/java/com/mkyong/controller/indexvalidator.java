@@ -1,5 +1,7 @@
 package com.mkyong.controller;
 
+import java.util.Hashtable;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -35,6 +37,7 @@ public class indexvalidator {
 	private String achievements;
 	private String certificates;
 	private String interests;
+	private Hashtable<String, String> errors;
 	
 	public String getWork_task() {
 		return work_task;
@@ -168,4 +171,10 @@ public class indexvalidator {
 	public void setCompany_name(String company_name) {
 		this.company_name = company_name;
 	}
+	public void setStatus(String string) {
+		// TODO Auto-generated method stub
+	}
+	public void setErrors(String key, String msg) {
+	    errors.put(key,msg);
+}
 }

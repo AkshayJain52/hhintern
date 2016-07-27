@@ -6,11 +6,38 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>resume</title>
 </head>
+
+<script>  
+function validateform(){  
+var First_name=document.myform.First_name.value;   
+var Family_name=document.myform.Family_name.value;
+var x=document.myform.email_id.value;  
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");
+var phone_no=document.myform.phone_no.value;
+if (First_name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if (First_name==null || name==""){  
+	  alert("Name can't be blank");  
+	  return false; 
+  } else if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+  return false;  
+  }else if (phone_no==null || phone_no==""){  
+	  alert("phone no can't be blank");  
+	  return false; 
+  }
+}  
+</script>  
 <body>
  <div style="width:800px; margin:0 auto;text-align:center;color: blue">
         <h1>Resume Writing</h1>
     </div>
- <form action = "welcome" method="get">
+    Select a file to upload: <br />
+ <form action = "welcome" method="post" onsubmit="return validateform()">
+<input type="file" name="file" size="50" />
+<br />
  Name:
 *<input style="color: #f00" name = "First_name" type="text" value="Your first name" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'Your first name') {this.style.color='#0f0'; this.value=''}">
 *<input style="color: #f00" name = "Family_name" type="text" value="Family_name" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'Family_name') {this.style.color='#0f0'; this.value=''}">
@@ -45,6 +72,7 @@ None:
 <br><br>
 Work_experience:
 <input style="color: #f00" name = "work_experience" type="text" value="work_experience" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'work_experience') {this.style.color='#0f0'; this.value=''}">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Work_position:
 <input style="color: #f00" name = "work_position" type="text" value="work_position" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'work_position') {this.style.color='#0f0'; this.value=''}">
 <br><br>
@@ -56,10 +84,11 @@ Work_task:
 <br><br>
 Projects:
 <input style="color: #f00" name = "personal_projects1" type="text" value="personal_projects1" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'personal_projects1') {this.style.color='#0f0'; this.value=''}">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <input style="color: #f00" name = "personal_projects2" type="text" value="personal_projects2" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'personal_projects2') {this.style.color='#0f0'; this.value=''}">
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <input style="color: #f00" name = "personal_projects3" type="text" value="personal_projects3" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'personal_projects3') {this.style.color='#0f0'; this.value=''}">
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <input style="color: #f00" name = "personal_projects4" type="text" value="personal_projects4" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'personal_projects4') {this.style.color='#0f0'; this.value=''}">
 <br><br>
 Education:
@@ -69,9 +98,9 @@ Education_courses:
 <br><br>
 Skills:
 <input style="color: #f00" name = "skills1" type="text" value="skills1" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'skills1') {this.style.color='#0f0'; this.value=''}">
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <input style="color: #f00" name = "skills2" type="text" value="skills2" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'skills2') {this.style.color='#0f0'; this.value=''}">
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <input style="color: #f00" name = "skills3" type="text" value="skills3" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'skills3') {this.style.color='#0f0'; this.value=''}">
 <br><br>
 Achievements:
@@ -79,6 +108,7 @@ Achievements:
 <br><br>
 Certificates:
 <input style="color: #f00" name = "certificates" type="text" value="certificates" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'certificates') {this.style.color='#0f0'; this.value=''}">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Interests:
 <input style="color: #f00" name = "interests" type="text" value="interests" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'interests') {this.style.color='#0f0'; this.value=''}">
 <br><br>

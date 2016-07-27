@@ -72,9 +72,8 @@
 %>
  
 <!-- link to download the page in pdf and docx  -->
-        <a href="download_pdf" shape="circle">downloadpdf</a>
-        <br><br>
-        <a href="download_docx" shape="circle">downloaddocx</a>
-  		
+        <a href="download_pdf">downloadpdf</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <a href="download_docx">downloaddocx</a>
 </body>
 </html>
