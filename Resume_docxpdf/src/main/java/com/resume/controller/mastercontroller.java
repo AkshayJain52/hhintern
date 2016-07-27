@@ -14,19 +14,13 @@ import java.net.URLConnection;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 
 @Controller
-public class mastercontroller extends WebMvcConfigurerAdapter {
+public class mastercontroller {
 	
 	public String url,First_name;
 	String filename,filename1;
@@ -37,13 +31,9 @@ public class mastercontroller extends WebMvcConfigurerAdapter {
 	}
 	
 	
-	private static final Logger logger = LoggerFactory.getLogger(mastercontroller.class);
-	
-	@ModelAttribute
 	@RequestMapping(value = "/welcome", method = RequestMethod.GET)
-	public String welcomeName( Model model,HttpServletRequest request) throws IOException {
+	public String welcomeName( HttpServletRequest request) throws IOException {
 				
-		logger.info("Returning welcome.jsp page");
 		url= request.getRequestURL()+"?"+request.getQueryString();
 		First_name=request.getParameter("First_name");
 				
