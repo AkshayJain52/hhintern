@@ -56,7 +56,11 @@ public class mastercontroller extends WebMvcConfigurerAdapter {
 
 		filename="Resume_"+First_name.toUpperCase()+".pdf";
 		
-	ProcessBuilder pb = new ProcessBuilder( "wkhtmltopdf.exe",url,filename);
+		ClassLoader classLoader = getClass().getClassLoader();
+		File file = new File(classLoader.getResource("wkhtmltopdf.exe").getFile());
+		String absolutePath = file.getAbsolutePath();
+		
+	ProcessBuilder pb = new ProcessBuilder( absolutePath,url,filename);
     pb.redirectErrorStream(true);
     
     BufferedReader inStreamReader = new BufferedReader(new InputStreamReader(pb.start().getInputStream()));
@@ -87,10 +91,10 @@ public class mastercontroller extends WebMvcConfigurerAdapter {
         // delete the file by giving the file to user
            try{
        		
-       		File file = new File(filename);
+       		File file1 = new File(filename);
            	
-       		if(file.delete()){
-       			System.out.println(file.getName() + " is deleted!");
+       		if(file1.delete()){
+       			System.out.println(file1.getName() + " is deleted!");
        		}else{
        			System.out.println("Delete operation is failed.");
        		}
