@@ -28,16 +28,14 @@ if (First_name==null || name==""){
 	  alert("phone no can't be blank");  
 	  return false; 
   }
+  return true;
 }  
 </script>  
 <body>
  <div style="width:800px; margin:0 auto;text-align:center;color: blue">
-        <h1>Resume Writing</h1>
+        <h2>Resume Writing</h2>
     </div>
-    Select a file to upload: <br />
- <form action = "welcome" method="post" onsubmit="return validateform()">
-<input type="file" name="file" size="50" />
-<br />
+ <form action = "welcome" method="get" onsubmit="return validateform()">
  Name:
 *<input style="color: #f00" name = "First_name" type="text" value="Your first name" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'Your first name') {this.style.color='#0f0'; this.value=''}">
 *<input style="color: #f00" name = "Family_name" type="text" value="Family_name" onblur="if(this.value == '') { this.style.color='#f00'; }" onfocus="if (this.value == 'Family_name') {this.style.color='#0f0'; this.value=''}">

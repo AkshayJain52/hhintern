@@ -7,9 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<!--  <form action = "index.jsp" method="get"> -->
-<!-- getting the parameter from index page  -->
-
 		<%
 		String First_name=request.getParameter("First_name");
 		String Family_name=request.getParameter("Family_name");
