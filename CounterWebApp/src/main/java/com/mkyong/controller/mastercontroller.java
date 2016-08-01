@@ -10,6 +10,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -22,12 +23,14 @@ import javax.validation.Valid;
 import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
 import org.jdom2.output.XMLOutputter;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -35,6 +38,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.pdf.PdfWriter;
+
 import com.itextpdf.tool.xml.XMLWorkerHelper;
 
 @Controller
@@ -50,7 +54,11 @@ public class mastercontroller{
 	}
 	
 	private static final Logger logger = LoggerFactory.getLogger(mastercontroller.class);
+	
+	
 	//private Map<String, indexvalidator> indexs;
+	
+	
 	//response body for handling the page coming from first page
 	@ModelAttribute
 	@RequestMapping(value = "/welcome", method = RequestMethod.GET)
@@ -63,10 +71,15 @@ public class mastercontroller{
 		model.addAttribute("indexvalidator", indexvalidator);
 		url= request.getRequestURL()+"?"+request.getQueryString();
 		First_name=request.getParameter("First_name");
-		//indexDaoImpl im = new indexDaoImpl();
-		//im.save(indexvalidator);
+		
 		
 		//Validation code start
+		
+		
+		/*indexDaoImpl im = new indexDaoImpl();
+		im.save(indexvalidator);
+		
+		
         boolean error = false;
          
         System.out.println(indexvalidator); //Verifying if information is same as input by user
@@ -91,14 +104,10 @@ public class mastercontroller{
 			return "index";
 		}
 		
-		
-		
-		
-		
-		//email_id = request.getParameter("email_id");
-		//indexvalidation iv = new indexvalidation();
-		//String error = iv.validate();
-		/*try{
+		email_id = request.getParameter("email_id");
+		indexvalidation iv = new indexvalidation();
+		String error = iv.validate();
+		try{
 		indexs.put(indexvalidator.getEmail_id(),indexvalidator);
 		}
 		catch (Exception e) {
@@ -113,9 +122,19 @@ public class mastercontroller{
 		}*/
 		return "welcome";
 	}
+	// validation cod 2 start
+	/*
+	@RequestMapping(method = RequestMethod.GET)
+	public String displayCustomerForm(ModelMap model) {
+
+		model.addAttribute("indexvalidator", new indexvalidator());
+		return "index";
+
+	}
+	*/
 	//response body for handling the download of pdf
 	@RequestMapping(value= "/download_pdf",method = RequestMethod.GET)
-	public String downloadpdf(HttpServletRequest request,HttpServletResponse response) throws IOException, JDOMException, DocumentException  {
+	public String downloadpdf(HttpServletRequest request,HttpServletResponse response) throws JDOMException, DocumentException, IOException{
 
 		filename="Resume_"+First_name.toUpperCase()+".pdf";
     		
@@ -132,8 +151,8 @@ public class mastercontroller{
 		   String inputLine;
 		 
 		   //save to this filename
-		   String fileName = "temp.html";
-		   File file1 = new File(fileName);
+		   String f1 = "temp.html";
+		   File file1 = new File(f1);
 		   if (!file1.exists()) {
 		    file1.createNewFile();
 		   }
@@ -152,10 +171,9 @@ public class mastercontroller{
 		   FileReader frInHtml=null;
 		   BufferedWriter bwOutXml =null;
 		   BufferedReader brInHtml=null;
-		   
 		   frInHtml = new FileReader("temp.html");
 		      brInHtml = new BufferedReader(frInHtml);
-		      @SuppressWarnings("deprecation")
+			@SuppressWarnings("deprecation")
 			SAXBuilder saxBuilder = new SAXBuilder("org.ccil.cowan.tagsoup.Parser", false);
 		      org.jdom2.Document jdomDocument = saxBuilder.build(brInHtml);
 		      XMLOutputter outputter = new XMLOutputter();
@@ -165,8 +183,6 @@ public class mastercontroller{
 		         bwOutXml = new BufferedWriter(fwOutXml);
 		         outputter.output(jdomDocument, bwOutXml);
 		         System.out.flush();
-		          
-
 		         fwOutXml.flush();
 		         fwOutXml.close();
 		         bwOutXml.close();
@@ -181,11 +197,16 @@ public class mastercontroller{
 		        
 		         //----------------------- XML TO PDF CREATTION ------------------------ 
 		         
-		         File html_temp_file = new File("temp.html");
 		         File xml_temp_file = new File("xml.xml");
 		         xml_temp_file.delete();
-		         html_temp_file.delete();
-		          
+		         File html_temp_file = new File("temp.html");
+		         if(html_temp_file.delete()){
+		        	 System.out.println("ok");
+		         }
+		         else{
+		        	 System.out.println("noooo");
+		         }
+		   
 		 
 		  } catch (MalformedURLException e1) {
 		   e1.printStackTrace();
@@ -220,9 +241,6 @@ public class mastercontroller{
 	return "index";
 }
 	
-	
-	
-
 		// response body for handling the download of docx
 		@RequestMapping(value= "/download_docx",method = RequestMethod.GET)
        	public String downloaddocx(HttpServletRequest request,HttpServletResponse response) throws IOException {

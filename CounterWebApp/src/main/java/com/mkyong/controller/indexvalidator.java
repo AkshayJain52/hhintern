@@ -18,8 +18,8 @@ public class indexvalidator {
 	@Email
 	private String email_id ;
 	@NotNull
-	private String phone_no ;
-	private String address ;
+	private String phone_no;
+	private String address;
 	private String another_contact_information;
 	private String work_experience;
 	private String work_position;
