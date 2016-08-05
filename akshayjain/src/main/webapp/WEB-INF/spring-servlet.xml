@@ -1,0 +1,27 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+
+	<context:component-scan base-package="com.mkyong.controller" />
+
+     <mvc:resources mapping="/resumeBuilder/resumeBuilder/**" location="/resumeBuilder/resumeBuilder/" cache-period="31556926"/>
+	<!-- <mvc:resources mapping="/resources/**" location="C:\Users\HHEXUSER\Desktop\hhintern\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\CounterWebApp\resources"/> -->
+	<!-- <mvc:resources mapping="/resources/**" location="/resources/**"/> -->
+	<!-- <mvc:resources location="/css/" mapping="/css/**" /> -->
+    <mvc:annotation-driven />
+    
+    <!-- <mvc:resources location="/script/" mapping="/script/**" />
+    <mvc:resources location="/img/" mapping="/img/**" />
+    <mvc:resources location="/fonts/" mapping="/fonts/**" /> -->
+
+    
+     <mvc:default-servlet-handler />
+</beans>
